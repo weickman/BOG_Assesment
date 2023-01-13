@@ -1,0 +1,81 @@
+
+ 
+ body{
+    background-image: url(images.png);
+ }
+ .wrapper{
+    display: grid; 
+    max-height: 500px;
+    animation: cardEntrance 700ms ease-out;
+    animation-fill-mode: backwards;
+    size-adjust: fit-content;
+    grid-template-areas: 
+    "a"
+    "b"
+    "c";
+    grid-template-rows: 20%,15%,auto;
+    grid-template-columns: auto;
+    gap:1rem;
+}
+h1{
+    animation: cardEntrance 700ms ease-out;
+    animation-fill-mode: backwards;
+    text-align: center;
+    color: white;
+    background-color: rgba(23, 23, 23, 0.915);
+    border-radius: 25px;
+    padding: 15px;
+}
+@keyframes cardEntrance{
+    from{
+        opacity:0;
+        transform:scale(0.3);
+    }
+    to{
+       opacity: 1;
+       transform:scale(1);
+       filter: hue-rotate(0deg);
+    }
+}
+.one{
+    grid-area: a;
+    size-adjust: fit-content;
+    align-items: center;
+    margin-left: 35%;
+    margin-right: 35%;
+    border-radius: 25px;
+    padding: 15px;
+    align-items: center;
+}
+.two{
+    animation-delay: 100ms;
+    place-items: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    max-height: 550px;
+    grid-area: b;
+    background-color: rgba(108, 27, 213, 0.888);
+    border-radius: 30px;
+    padding: 20px;
+}
+.three{
+    animation-delay: 100ms;
+    margin-left: 20%;
+    margin-right: 20%;
+    grid-area: c;
+    background-color: rgba(191, 191, 191, 0.678);
+    border-radius: 30px;
+    padding: 20px;
+}
+p{
+    text-align: center;
+    font-size: 40;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.img{
+    border-radius: 40px;
+    padding: 20px;
+    margin-left: 2%;
+    width: 90%;
+    height: 90%;
+}
